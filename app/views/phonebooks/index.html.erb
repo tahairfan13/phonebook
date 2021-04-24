@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Phonebooks</h1>
+
+<%= form_tag phonebooks_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :query, params[:query] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @phonebooks.each do |phonebook| %>
+      <tr>
+        <td><%= phonebook.number %></td>
+        <td><%= phonebook.name %></td>
+        <td><%= link_to 'Show', phonebook %></td>
+        <td><%= link_to 'Edit', edit_phonebook_path(phonebook) %></td>
+        <td><%= link_to 'Destroy', phonebook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Phonebook', new_phonebook_path %>
