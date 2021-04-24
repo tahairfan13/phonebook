@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Steps to get started
 
-Things you may want to cover:
+* Run rails db:seed command
 
-* Ruby version
+* run the server and goto /phonebooks path
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* you can search the number present in phonebook
